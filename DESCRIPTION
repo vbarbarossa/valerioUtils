@@ -2,7 +2,7 @@ Package: valerioUtils
 Type: Package
 Title: valerioUtils
 Version: 0.1.0
-Author: Who wrote it
+Author: Valerio Barbarossa
 Maintainer: Valerio Barbarossa <v.barbarossa@fnwi.ru.nl>
 Description: Personal set of R functions
 License: none
