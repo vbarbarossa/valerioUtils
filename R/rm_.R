@@ -10,6 +10,4 @@ rm_ <- function(name_dir){
       paste0('rm -r ',name_dir)
     )
   }
-  if(!dir.exists(name_dir)) dir.create(name_dir,recursive = T)
-  return(name_dir)
 }
