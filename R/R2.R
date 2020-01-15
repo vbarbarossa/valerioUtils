@@ -6,8 +6,8 @@ r.squared <- function(obs,sim){
   if(length(obs) != length(sim)){
     stop("Different number of entries among the two sets of data")
   }else{
-    obs_nas <- !is.na(obs)
-    sim_nas <- !is.na(sim)
+    obs_nas <- !is.na(obs) & !is.nan(obs) & !is.infinite(obs)
+    sim_nas <- !is.na(sim) & !is.nan(sim) & !is.infinite(sim)
     common_val <- obs_nas & sim_nas
     if(sum(common_val,na.rm=T) != length(obs)){
       warning(paste0("\n",sum(obs_nas == F)," NA(s) found in obs (RMSE)\n",sum(sim_nas == F), " NA(s) found in sim (RMSE)"))
